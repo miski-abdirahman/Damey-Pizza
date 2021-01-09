@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootsrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
+    <title>Damey Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Damey Pizza</h1>
+      </div>
+      <div class="row">
+        <form id="pizza-form" class="well">
+          <div class="form-group col-md-6">
+            <label for="pizza-crust">Choose your pie</label>
+            <select class="form-control" name="pizza-pie" id="pizza-pie">
+              <option value="1">Hand-Tossed</option>
+              <option value="0">Thin Crust</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="pizza-size">Choose your pizza size</label>
+            <select class="form-control" name="pizza-size" id="pizza-size">
+              <option value="10">Small (10")</option>
+              <option value="11">Medium (12")</option>
+              <option value="13">Large (14")</option>
+            </select>
+          </div>
+          <div id="topping-style">
+            <div class="form-group">
+              <div id="toppinglabel-style">
+                <label for="pizza-toppings">Choose your toppings:</label><br>
+                <p>Small ( 800ksh)    Medium (1000ksh)    Large (1200ksh)</p>
+                <hr>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p>Meat Toppings:</p>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1" checked>Anchovies</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Bacon</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Beef</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Canadian Bacon</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Grilled All-White</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Chicken</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Italian Sausage</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Pepperoni</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Sausage</label>
+                  </div>
+                  <div class="col-md-4">
+                    <p>Vegetable Toppings:</p>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Fresh Mushrooms</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Black Olives</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Green Peppers</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Jalapeño Peppers</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Onions</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Pineapple</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Roma Tomatoes</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Extra Cheese</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="1">Roasted Garlice</label>
+                  </div>
+                  <div class="col-md-4">
+                    <p>Premium Toppings:</p>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="2">Chicken, Extra Cheese</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="2">Roasted Garlic, 3 Cheese</label>
+                    <label class="checkbox"><input type="checkbox" name="pizza-toppings" value="2">Artichokes Hearts</label>
+                    <img src="img/pizza.png" alt="pepperoni photo" id="small-pizza">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <button type="submit" class ="btn btn-success btn-lg">Order</button>
+        </form>
+      </div>
+      <div class="pizza-summary well">
+        <h3>Order Summary:</h3>
+        <hr>
+        <div class="row">
+          <div class="col-md-3">
+            <p>Crust:</p>
+            <p>Size:</p>
+            <p>Toppings:</p>
+            <hr>
+            <h2>Total:</h2>
+            <button type="reset" value="Refresh Page" onClick="window.location.reload()" class="btn btn-warning">Order Again</button>
+          </div>
+          <div class="col-md-3" id="borderRight-style">
+            <p>$&nbsp;<span id="crust-price"></span></p>
+            <p>$&nbsp;<span id="size-price"></span></p>
+            <p>$&nbsp;<span id="toppings-price"></span></p>
+            <hr>
+            <h2>$&nbsp;<span id="total"></span></h2>
+          </div>
+          <div class="col-md-6">
+            <img src="img/thank-you.png" alt="thank you image" class="img-rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <footer>Damey-Pizza<em> welcome always!</em></footer>
+
+  </body>
